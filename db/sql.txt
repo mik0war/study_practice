@@ -1,4 +1,11 @@
-CREATE TABLE user(
-    login VARCHAR(50),
-    password VARCHAR(100)
-)
+DROP TABLE IF EXISTS product;
+
+Create table product(
+	uid SERIAL PRIMARY KEY,
+	name VARCHAR(500)
+);
+
+ALTER TABLE product
+	ADD COLUMN amount INT;
+
+INSERT INTO product VALUES (1, 'Корица', 2000);
